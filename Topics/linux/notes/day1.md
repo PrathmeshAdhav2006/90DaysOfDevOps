@@ -305,4 +305,7 @@ sudo systemctl status nginx
 /etc/nginx/nginx.conf
 
 
+<img width="1200" height="800" alt="image" src="https://github.com/user-attachments/assets/9d326a63-ea14-40df-90cd-c37c29e9d321" />
+
+
 
