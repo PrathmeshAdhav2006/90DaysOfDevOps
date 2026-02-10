@@ -1,0 +1,356 @@
+# 📘 Source Code Management & Git – Complete Notes
+
+---
+
+# 1️⃣ Source Code Management (SCM)
+
+Source Code Management (SCM) is a system used to:
+
+- Store source code
+- Track changes
+- Manage versions
+- Enable teamwork
+- Restore old files
+
+It helps developers work safely and efficiently.
+
+---
+
+# 2️⃣ What is Git?
+
+Git is a Distributed Version Control System (DVCS).
+
+## Full Form of Git
+Git has no official full form.
+(Unofficial: Global Information Tracker)
+
+## Created By
+Git was created by Linus Torvalds in 2005.
+
+## Features
+- Fast
+- Secure
+- Offline support
+- Branching
+- Free & Open Source
+
+---
+
+# 3️⃣ File System
+
+A File System stores files and folders on a computer.
+
+Example:
+C:/Users/file.txt  
+/home/user/file.txt
+
+It does NOT track changes.
+
+---
+
+# 4️⃣ Version Control System (VCS)
+
+A Version Control System tracks file changes over time.
+
+It allows:
+- History tracking
+- Team collaboration
+- Backup
+- Restore
+- Conflict management
+
+---
+
+# 5️⃣ Difference: File System vs VCS
+
+| Feature | File System | VCS |
+|---------|-------------|-----|
+| History | No | Yes |
+| Backup | No | Yes |
+| Teamwork | No | Yes |
+| Tracking | No | Yes |
+| Restore | No | Yes |
+
+---
+
+# 6️⃣ Types of VCS
+
+1. Local VCS (RCS)
+2. Centralized VCS (SVN)
+3. Distributed VCS (Git)
+
+Git is most popular.
+
+---
+
+# 7️⃣ Git Stages
+
+Git has three stages:
+
+1. Working Directory
+2. Staging Area
+3. Repository
+
+Flow:
+Working → Staging → Repository
+
+---
+
+# 8️⃣ Git Workflow
+
+Edit → Add → Commit → Push
+
+---
+
+# 9️⃣ Important Git Commands
+
+## Setup
+git --version  
+git config --global user.name "Name"  
+git config --global user.email "email@gmail.com"
+
+## Initialize
+git init
+
+## Status
+git status
+
+## Add
+git add file.txt  
+git add .
+
+## Commit
+git commit -m "message"
+
+## History
+git log  
+git log --oneline
+
+## Branch
+git branch  
+git branch dev  
+git checkout dev  
+git checkout -b feature1
+
+## Merge
+git merge branch
+
+## Pull
+git pull
+
+## Push
+git push origin main
+
+## Clone
+git clone URL
+
+## Remote
+git remote -v  
+git remote add origin URL
+
+## Reset
+git reset --soft HEAD~1  
+git reset --hard HEAD~1
+
+## Stash
+git stash  
+git stash pop
+
+## Diff
+git diff
+
+---
+
+# 🔟 Connect Local to GitHub (HTTPS)
+
+## Steps
+
+1. Create repo on GitHub
+2. Initialize Git
+   git init
+3. Add files
+   git add .
+   git commit -m "first commit"
+4. Add remote
+   git remote add origin https://github.com/user/repo.git
+5. Push
+   git push -u origin main
+
+---
+
+# 1️⃣1️⃣ Connect Using SSH
+
+SSH = Secure Shell
+
+## Step 1: Generate Key
+ssh-keygen -t rsa -b 4096 -C "email@gmail.com"
+
+Press Enter 3 times.
+
+## Step 2: Start Agent
+eval "$(ssh-agent -s)"  
+ssh-add ~/.ssh/id_rsa
+
+## Step 3: Copy Key
+cat ~/.ssh/id_rsa.pub
+
+## Step 4: Add to GitHub
+GitHub → Settings → SSH → New Key → Paste
+
+## Step 5: Test
+ssh -T git@github.com
+
+## Step 6: Add SSH Remote
+git remote add origin git@github.com:user/repo.git  
+git push -u origin main
+
+---
+
+# 1️⃣2️⃣ .gitignore
+
+.gitignore tells Git which files to ignore.
+
+Example:
+
+node_modules/  
+.env  
+*.log  
+*.exe  
+
+These files are not tracked.
+
+---
+
+# 1️⃣3️⃣ Branching Strategies (Companies)
+
+## Git Flow
+main  
+develop  
+feature/*  
+release/*  
+hotfix/*  
+
+Used in big projects.
+
+## Feature Branch
+feature-login  
+feature-payment  
+
+## Trunk Based
+Only main branch
+
+Used by Google, Meta
+
+## Release Branch
+For stable versions
+
+---
+
+# 1️⃣4️⃣ Types of Branches
+
+## Main / Master
+Production branch
+
+main
+
+## Development
+Integration branch
+
+develop
+
+## Feature
+New feature work
+
+feature-login
+
+## Hotfix
+Emergency fixes
+
+hotfix-1.0.1
+
+## Release
+Before deployment
+
+release-v1.0
+
+---
+
+# 1️⃣5️⃣ Environments
+
+## Development
+For coding
+
+## Staging
+Testing before live
+
+## Production
+Live system
+
+Flow:
+Dev → Staging → Production
+
+---
+
+# 1️⃣6️⃣ Hotfix Branch
+
+Used for urgent bug fixes.
+
+Flow:
+main → hotfix → main + develop
+
+---
+
+# 1️⃣7️⃣ Feature Branch
+
+Used for one task.
+
+Example:
+git checkout -b feature-payment
+
+After work → merge
+
+---
+
+# 1️⃣8️⃣ Professional Workflow
+
+1. Create branch
+2. Write code
+3. Add
+4. Commit
+5. Push
+6. Pull Request
+7. Review
+8. Merge
+
+---
+
+# 1️⃣9️⃣ Advantages of Git
+
+- Free
+- Fast
+- Secure
+- Offline
+- Collaboration
+- History
+- Branching
+
+---
+
+# 2️⃣0️⃣ Summary
+
+| Term | Meaning |
+|------|----------|
+| SCM | Manage source code |
+| Git | Version tool |
+| VCS | Track changes |
+| Branch | Separate work |
+| Commit | Save |
+| Push | Upload |
+| Pull | Download |
+| Merge | Combine |
+| SSH | Secure login |
+| Ignore | Skip files |
+
+---
+
+
